@@ -11,7 +11,7 @@ import SwiftUI
 struct MyTodoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView().environment(\.managedObjectContext, CoreDataManager.shared.container.viewContext)
         }
     }
 }
